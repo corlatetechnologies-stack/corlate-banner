@@ -1,0 +1,629 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Banner Container */
+.banner {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(135deg, #0d7377 0%, #14a1a7 50%, #1ba9b4 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Circuit Board Background */
+.circuit-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+}
+
+/* Circuit Lines */
+.circuit-line {
+    position: absolute;
+    background: #F5B041;
+    box-shadow: 0 0 10px rgba(245, 176, 65, 0.5);
+}
+
+.line-1 {
+    width: 200px;
+    height: 2px;
+    top: 15%;
+    left: 5%;
+    transform: rotate(-35deg);
+}
+
+.line-2 {
+    width: 150px;
+    height: 2px;
+    top: 25%;
+    right: 10%;
+    transform: rotate(45deg);
+}
+
+.line-3 {
+    width: 180px;
+    height: 2px;
+    bottom: 20%;
+    left: 8%;
+    transform: rotate(25deg);
+}
+
+.line-4 {
+    width: 120px;
+    height: 2px;
+    top: 40%;
+    left: 15%;
+    transform: rotate(-15deg);
+}
+
+.line-5 {
+    width: 160px;
+    height: 2px;
+    bottom: 30%;
+    right: 15%;
+    transform: rotate(-40deg);
+}
+
+.line-6 {
+    width: 100px;
+    height: 2px;
+    top: 60%;
+    right: 25%;
+    transform: rotate(20deg);
+}
+
+.line-7 {
+    width: 140px;
+    height: 2px;
+    top: 35%;
+    right: 30%;
+    transform: rotate(-25deg);
+}
+
+.line-8 {
+    width: 110px;
+    height: 2px;
+    bottom: 15%;
+    right: 20%;
+    transform: rotate(35deg);
+}
+
+.line-9 {
+    width: 130px;
+    height: 2px;
+    top: 50%;
+    left: 10%;
+    transform: rotate(-30deg);
+}
+
+.line-10 {
+    width: 95px;
+    height: 2px;
+    bottom: 25%;
+    left: 30%;
+    transform: rotate(15deg);
+}
+
+.line-11 {
+    width: 170px;
+    height: 2px;
+    top: 20%;
+    left: 40%;
+    transform: rotate(-45deg);
+}
+
+.line-12 {
+    width: 125px;
+    height: 2px;
+    bottom: 35%;
+    right: 40%;
+    transform: rotate(40deg);
+}
+
+/* Nodes (circles at line intersections) */
+.node {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: #F5B041;
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(245, 176, 65, 0.8);
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.node-1 { top: 15%; left: 5%; }
+.node-2 { top: 15%; left: 17%; }
+.node-3 { top: 25%; right: 10%; }
+.node-4 { top: 25%; right: 21%; }
+.node-5 { bottom: 20%; left: 8%; }
+.node-6 { bottom: 20%; left: 20%; }
+.node-7 { top: 40%; left: 15%; }
+.node-8 { top: 40%; left: 26%; }
+.node-9 { bottom: 30%; right: 15%; }
+.node-10 { top: 60%; right: 25%; }
+.node-11 { top: 35%; right: 30%; }
+.node-12 { top: 35%; right: 41%; }
+.node-13 { bottom: 15%; right: 20%; }
+.node-14 { bottom: 15%; right: 31%; }
+.node-15 { top: 50%; left: 10%; }
+.node-16 { bottom: 25%; left: 30%; }
+.node-17 { top: 20%; left: 40%; }
+.node-18 { bottom: 35%; right: 40%; }
+
+/* Floating Dots */
+.dot {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    animation: float 4s ease-in-out infinite;
+}
+
+.dot-1 { top: 10%; left: 20%; animation-delay: 0s; }
+.dot-2 { top: 20%; left: 80%; animation-delay: 0.5s; }
+.dot-3 { top: 30%; left: 15%; animation-delay: 1s; }
+.dot-4 { top: 40%; left: 70%; animation-delay: 1.5s; }
+.dot-5 { top: 50%; left: 25%; animation-delay: 2s; }
+.dot-6 { top: 60%; left: 85%; animation-delay: 2.5s; }
+.dot-7 { top: 70%; left: 30%; animation-delay: 3s; }
+.dot-8 { top: 80%; left: 60%; animation-delay: 3.5s; }
+.dot-9 { top: 15%; right: 15%; animation-delay: 0.8s; }
+.dot-10 { top: 35%; right: 25%; animation-delay: 1.3s; }
+.dot-11 { top: 55%; right: 35%; animation-delay: 1.8s; }
+.dot-12 { top: 75%; right: 20%; animation-delay: 2.3s; }
+.dot-13 { top: 45%; left: 50%; animation-delay: 2.8s; }
+.dot-14 { top: 65%; left: 45%; animation-delay: 3.3s; }
+.dot-15 { top: 85%; left: 75%; animation-delay: 3.8s; }
+.dot-16 { top: 12%; left: 60%; animation-delay: 0.3s; }
+.dot-17 { top: 28%; left: 40%; animation-delay: 1.1s; }
+.dot-18 { top: 42%; left: 90%; animation-delay: 1.9s; }
+.dot-19 { top: 58%; left: 10%; animation-delay: 2.4s; }
+.dot-20 { top: 72%; left: 55%; animation-delay: 3.1s; }
+.dot-21 { top: 18%; right: 10%; animation-delay: 0.6s; }
+.dot-22 { top: 48%; right: 12%; animation-delay: 1.6s; }
+.dot-23 { top: 68%; right: 28%; animation-delay: 2.6s; }
+.dot-24 { top: 88%; right: 15%; animation-delay: 3.6s; }
+.dot-25 { top: 52%; left: 35%; animation-delay: 2.1s; }
+
+/* Content */
+.content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    color: white;
+    padding: 40px 20px;
+    max-width: 800px;
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 60px;
+}
+
+.logo-circle {
+    width: 50px;
+    height: 50px;
+    background: #F5B041;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(245, 176, 65, 0.6);
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.company-name {
+    font-size: 36px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: white;
+}
+
+.company-subtitle {
+    font-size: 18px;
+    letter-spacing: 4px;
+    color: white;
+}
+
+/* Main Title */
+.main-title {
+    font-size: 72px;
+    font-weight: bold;
+    letter-spacing: 8px;
+    margin-bottom: 30px;
+    color: #F5B041;
+    text-shadow: 0 0 30px rgba(245, 176, 65, 0.5);
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+/* Buttons Container */
+.buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+    flex-wrap: nowrap;
+}
+
+/* Button Base Styles */
+.btn {
+    display: inline-block;
+    padding: 18px 40px;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    border: 2px solid transparent;
+}
+
+/* Services Button */
+.services-btn {
+    background: transparent;
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    animation: pulse-white 2s ease-in-out infinite;
+}
+
+.services-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border-color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
+    animation: none;
+}
+
+/* Contact Button */
+.contact-btn {
+    background: #F5B041;
+    color: #0d7377;
+    border: 2px solid #F5B041;
+    box-shadow: 0 0 20px rgba(245, 176, 65, 0.4);
+    animation: pulse-gold 2s ease-in-out infinite;
+}
+
+.contact-btn:hover {
+    background: white;
+    color: #0d7377;
+    border-color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
+    animation: none;
+}
+
+/* Website */
+.website {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.8);
+    letter-spacing: 1px;
+    text-align: center;
+    z-index: 999;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 8px 20px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Services Section */
+
+.services-container {
+    width: 100%;
+    max-width: 1400px;
+    padding: 40px 20px 40px;
+    margin: 20px auto 0 auto;
+}
+
+.services-title {
+    text-align: center;
+    font-size: 42px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 50px;
+    letter-spacing: 3px;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+.services-unified {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 25px;
+    padding: 50px 40px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px 50px;
+}
+
+.services-unified::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #F5B041, #FFC870);
+}
+
+.service-item {
+    display: flex;
+    align-items: flex-start;
+    padding: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.service-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.service-icon {
+    width: 70px;
+    height: 70px;
+    margin-right: 20px;
+    background: rgba(245, 176, 65, 0.2);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.service-icon svg {
+    width: 35px;
+    height: 35px;
+    color: #F5B041;
+}
+
+.service-item:hover .service-icon {
+    transform: scale(1.1);
+    background: rgba(245, 176, 65, 0.3);
+}
+
+.service-content {
+    flex: 1;
+    text-align: left;
+}
+
+.service-content h3 {
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+    line-height: 1.3;
+}
+
+.service-content p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 16px;
+    line-height: 1.6;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+
+.service-item.highlight {
+    background: rgba(245, 176, 65, 0.15);
+    border: 2px solid rgba(245, 176, 65, 0.4);
+}
+
+.free-badge {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 6px 16px;
+    background: #F5B041;
+    color: #0d7377;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+    font-weight: bold;
+    letter-spacing: 2px;
+    border-radius: 20px;
+}
+
+/* WhatsApp Floating Button */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background: #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.5);
+    z-index: 9999;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 30px rgba(37, 211, 102, 0.7);
+}
+
+.whatsapp-icon {
+    width: 35px;
+    height: 35px;
+    color: white;
+    fill: white;
+}
+
+/* Animations */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.5);
+        opacity: 0.7;
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+        opacity: 0.3;
+    }
+    50% {
+        transform: translateY(-20px);
+        opacity: 0.8;
+    }
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 20px rgba(245, 176, 65, 0.5);
+    }
+    to {
+        text-shadow: 0 0 40px rgba(245, 176, 65, 0.8);
+    }
+}
+
+@keyframes pulse-white {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+        border-color: rgba(255, 255, 255, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+        border-color: rgba(255, 255, 255, 0.8);
+    }
+}
+
+@keyframes pulse-gold {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(245, 176, 65, 0.4);
+        background: #F5B041;
+    }
+    50% {
+        box-shadow: 0 0 40px rgba(245, 176, 65, 0.7);
+        background: #FFC870;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .services-unified {
+        gap: 30px 40px;
+        padding: 40px 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .services-container {
+        padding: 40px 20px;
+        margin-top: 40px;
+    }
+    
+    .services-title {
+        font-size: 32px;
+        margin-bottom: 30px;
+    }
+    
+    .services-unified {
+        padding: 30px 25px;
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .service-item {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 20px;
+    }
+    
+    .service-icon {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    
+    .service-content {
+        text-align: center;
+    }
+    }
+    
+    .service-content {
+        text-align: center;
+    }
+    
+    .main-title {
+        font-size: 48px;
+        letter-spacing: 4px;
+    }
+    
+    .description {
+        font-size: 16px;
+    }
+    
+    .buttons {
+        flex-direction: row;
+        justify-content: center;
+        gap: 15px;
+    }
+    
+    .btn {
+        padding: 16px 30px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-title {
+        font-size: 36px;
+        letter-spacing: 2px;
+    }
+    
+    .description {
+        font-size: 14px;
+    }
+}
