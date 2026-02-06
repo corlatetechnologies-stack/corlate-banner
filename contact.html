@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - Corlate Technologies</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&family=Lexend+Deca:wght@300;400;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&family=Lexend+Deca:wght@300;400;600&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <!-- Animated background elements (same as home) -->
     <div class="circuit-container">
@@ -22,7 +26,7 @@
         <div class="circuit-line line-10"></div>
         <div class="circuit-line line-11"></div>
         <div class="circuit-line line-12"></div>
-        
+
         <div class="node node-1"></div>
         <div class="node node-2"></div>
         <div class="node node-3"></div>
@@ -41,7 +45,7 @@
         <div class="node node-16"></div>
         <div class="node node-17"></div>
         <div class="node node-18"></div>
-        
+
         <div class="dot dot-1"></div>
         <div class="dot dot-2"></div>
         <div class="dot dot-3"></div>
@@ -73,27 +77,31 @@
         <header class="topbar topbar-fixed">
             <div class="topbar-inner">
                 <div class="logo logo-compact">
-                    <img src="Logo-1.png" alt="Corlate logo" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                    <img src="Logo-1.png" alt="Corlate logo" class="logo-img"
+                        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
                     <div class="logo-circle" style="display:none"></div>
                     <div class="company-name">CORLATE</div>
                 </div>
-                <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" onclick="toggleNav()">☰</button>
+                <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"
+                    onclick="toggleNav()">☰</button>
                 <nav class="nav">
                     <a class="nav-link" href="index.html" onclick="closeNavIfOpen()">Home</a>
                     <a class="nav-link" href="services.html" onclick="closeNavIfOpen()">Services</a>
                     <a class="nav-link" href="contact.html" onclick="closeNavIfOpen()">Contact</a>
-                    <button class="nav-cta chat-btn" type="button" onclick="openChat()">Chat</button>
+
                 </nav>
             </div>
         </header>
-        
+
         <!-- Contact Section (minimal & aligned with home) -->
         <div class="contact-container contact-minimal">
             <div class="contact-content">
                 <div class="contact-left">
                     <h2>Contact Us</h2>
-                    <p class="audit-lead">Quick questions or want an audit? Drop a short message and we’ll reply within 1–2 business days.</p>
-                    <div style="margin-top:12px;"><a class="btn outline-cta" href="mailto:info@corlate.co.za">Email Us</a></div>
+                    <p class="audit-lead">Quick questions or want an audit? Drop a short message and we’ll reply within
+                        1–2 business days.</p>
+                    <div style="margin-top:12px;"><a class="btn outline-cta" href="mailto:info@corlate.co.za">Email
+                            Us</a></div>
                 </div>
 
                 <div class="contact-right">
@@ -101,12 +109,13 @@
                         <input id="name" type="text" name="name" placeholder="Name" required>
                         <input id="email" type="email" name="email" placeholder="Email" required>
                         <textarea id="message" name="message" rows="5" placeholder="Message" required></textarea>
-                        <div style="margin-top:12px;"><button class="btn primary-cta" type="submit">Send Message</button></div>
+                        <div style="margin-top:12px;"><button class="btn primary-cta" type="submit">Send
+                                Message</button></div>
                     </form>
                 </div>
             </div>
         </div>
-        
+
         <!-- Footer -->
         <footer class="site-footer">
             <div class="footer-inner">
@@ -120,52 +129,53 @@
             </div>
         </footer>
 
-        <!-- WhatsApp Floating Button -->
-        <a href="https://wa.me/27793241570" target="_blank" class="whatsapp-float" title="Contact us on WhatsApp">
-            <svg viewBox="0 0 32 32" class="whatsapp-icon">
-                <path fill="currentColor" d="M16 0c-8.837 0-16 7.163-16 16 0 2.825 0.737 5.607 2.137 8.048l-2.137 7.952 7.933-2.127c2.42 1.396 5.169 2.127 8.067 2.127 8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 29.467c-2.482 0-4.908-0.646-7.07-1.87l-0.507-0.292-5.193 1.393 1.404-5.227-0.321-0.527c-1.305-2.136-1.996-4.601-1.996-7.145 0-7.444 6.056-13.5 13.5-13.5s13.5 6.056 13.5 13.5-6.056 13.5-13.5 13.5zM21.803 19.275c-0.363-0.182-2.142-1.058-2.475-1.179s-0.575-0.182-0.817 0.182c-0.242 0.363-0.938 1.179-1.15 1.421s-0.425 0.272-0.788 0.091c-0.363-0.182-1.533-0.565-2.92-1.803-1.08-0.963-1.809-2.153-2.021-2.516s-0.022-0.559 0.159-0.74c0.164-0.163 0.363-0.425 0.545-0.637s0.242-0.363 0.363-0.606 0.060-0.454-0.030-0.637c-0.091-0.182-0.817-1.968-1.12-2.697-0.295-0.71-0.595-0.614-0.817-0.625-0.212-0.010-0.454-0.012-0.696-0.012s-0.637 0.091-0.97 0.454c-0.333 0.363-1.272 1.243-1.272 3.029s1.302 3.513 1.484 3.755c0.182 0.242 2.567 3.92 6.218 5.497 0.868 0.375 1.546 0.6 2.074 0.768 0.872 0.277 1.665 0.238 2.293 0.144 0.699-0.104 2.142-0.876 2.444-1.721s0.302-1.572 0.212-1.721c-0.091-0.15-0.333-0.242-0.696-0.425z"/>
+        <!-- Zoho Floating Button -->
+        <button class="zoho-float" onclick="openChat()" aria-label="Open Chat">
+            <svg viewBox="0 0 24 24" class="zoho-icon">
+                <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z" />
             </svg>
-        </a>
+        </button>
+
     </div>
-    
+
     <script>
         // Form submission handler
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
             e.preventDefault();
-            
-            // Get form data
             const formData = {
                 name: document.getElementById('name').value,
                 email: document.getElementById('email').value,
                 message: document.getElementById('message').value
             };
-            
-            // TODO: send to backend (Zoho/CRM endpoint)
-            // For now, show a lightweight success confirmation
-            if(window.showToast) showToast('Thanks — message sent. We will reply within 1–2 business days.', 3000);
-            
-            // Reset form
+            // TODO: send to backend
+            if (window.showToast) showToast('Thanks — message sent. We will reply within 1–2 business days.', 3000);
             this.reset();
         });
 
-        // Open Chat: do NOT call Zoho directly — show guidance and navigate to contact
-        window.openChat = function(){ if(window.showToast) showToast('Please use the contact form or email us — chat is not enabled.', 3200); if(document.getElementById('contact')) window.location.hash = '#contact'; else window.location.href = 'contact.html#contact'; };
+        // Open Chat Function
+        window.openChat = function () {
+            if (window.$zoho && $zoho && $zoho.salesiq && $zoho.salesiq.initiate) {
+                try { $zoho.salesiq.initiate(); } catch (e) { window.location.hash = '#contact'; }
+            } else if (window.Zoho && Zoho.salesiq && Zoho.salesiq.show) {
+                try { Zoho.salesiq.show(); } catch (e) { window.location.hash = '#contact'; }
+            } else {
+                window.location.hash = '#contact';
+            }
+        };
 
-        // Toast helper
-        window.showToast = function(msg, duration){ var t = document.getElementById('toast'); if(!t) return; t.textContent = msg; t.setAttribute('aria-hidden','false'); t.classList.add('show'); clearTimeout(window._toastTimeout); window._toastTimeout = setTimeout(function(){ t.classList.remove('show'); t.setAttribute('aria-hidden','true'); }, duration || 3200); };
+        // Minimal helpers
+        window.showToast = function (msg, duration) { var t = document.getElementById('toast'); if (!t) return; t.textContent = msg; t.setAttribute('aria-hidden', 'false'); t.classList.add('show'); clearTimeout(window._toastTimeout); window._toastTimeout = setTimeout(function () { t.classList.remove('show'); t.setAttribute('aria-hidden', 'true'); }, duration || 3200); };
+        document.addEventListener('DOMContentLoaded', function () { var b = document.getElementById('siteBanner'); if (b) { if (localStorage.getItem('bannerDismissed')) { b.style.display = 'none'; document.body.classList.add('banner-hidden'); } else { document.body.classList.remove('banner-hidden'); } } });
+        window.dismissBanner = function () { var b = document.getElementById('siteBanner'); if (!b) return; b.style.display = 'none'; document.body.classList.add('banner-hidden'); localStorage.setItem('bannerDismissed', '1'); };
 
-        // Site banner handling
-        document.addEventListener('DOMContentLoaded', function(){ var b = document.getElementById('siteBanner'); if(b){ if(localStorage.getItem('bannerDismissed')){ b.style.display='none'; document.body.classList.add('banner-hidden'); } else { document.body.classList.remove('banner-hidden'); } } });
-        window.dismissBanner = function(){ var b = document.getElementById('siteBanner'); if(!b) return; b.style.display='none'; document.body.classList.add('banner-hidden'); localStorage.setItem('bannerDismissed','1'); };
-
-
-        // Replace mobile nav toggle & accessible behavior
-        window.toggleNav = function(){ var nav = document.querySelector('.nav'); var toggle = document.querySelector('.nav-toggle'); if(!nav || !toggle) return; var isOpen = nav.classList.toggle('open'); toggle.setAttribute('aria-expanded', isOpen); if(isOpen){ // close on outside click document.addEventListener('click', window._navOutsideHandler = function onDocClick(e){ if(!nav.contains(e.target) && e.target !== toggle){ nav.classList.remove('open'); toggle.setAttribute('aria-expanded','false'); document.removeEventListener('click', window._navOutsideHandler); document.removeEventListener('keydown', window._navKeyHandler); } }); // close on Escape document.addEventListener('keydown', window._navKeyHandler = function onDocKey(e){ if(e.key === 'Escape' || e.key === 'Esc'){ nav.classList.remove('open'); toggle.setAttribute('aria-expanded','false'); document.removeEventListener('click', window._navOutsideHandler); document.removeEventListener('keydown', window._navKeyHandler); } }); } else { if(window._navOutsideHandler) document.removeEventListener('click', window._navOutsideHandler); if(window._navKeyHandler) document.removeEventListener('keydown', window._navKeyHandler); } };
-        window.closeNavIfOpen = function(){ var nav = document.querySelector('.nav'); var toggle = document.querySelector('.nav-toggle'); if(nav && nav.classList.contains('open')){ nav.classList.remove('open'); if(toggle) toggle.setAttribute('aria-expanded','false'); } };
+        window.toggleNav = function () { var nav = document.querySelector('.nav'); var toggle = document.querySelector('.nav-toggle'); if (!nav || !toggle) return; var isOpen = nav.classList.toggle('open'); toggle.setAttribute('aria-expanded', isOpen); if (isOpen) { document.addEventListener('click', window._navOutsideHandler = function onDocClick(e) { if (!nav.contains(e.target) && e.target !== toggle) { nav.classList.remove('open'); toggle.setAttribute('aria-expanded', 'false'); document.removeEventListener('click', window._navOutsideHandler); } }); } };
+        window.closeNavIfOpen = function () { var nav = document.querySelector('.nav'); if (nav && nav.classList.contains('open')) { nav.classList.remove('open'); var toggle = document.querySelector('.nav-toggle'); if (toggle) toggle.setAttribute('aria-expanded', 'false'); } };
     </script>
-<script>window.$zoho=window.$zoho || {};$zoho.salesiq=$zoho.salesiq||{ready:function(){}}</script>
-<script id="zsiqscript" src="https://salesiq.zohopublic.com/widget?wc=siq60a528476f7ac668adb68f724319ffc3" defer></script>
+    <script>window.$zoho = window.$zoho || {}; $zoho.salesiq = $zoho.salesiq || { ready: function () { } }</script>
+    <script id="zsiqscript" src="https://salesiq.zohopublic.com/widget?wc=siq60a528476f7ac668adb68f724319ffc3"
+        defer></script>
 
     <div id="toast" class="toast" role="status" aria-live="polite" aria-atomic="true" aria-hidden="true"></div>
 </body>
+
 </html>

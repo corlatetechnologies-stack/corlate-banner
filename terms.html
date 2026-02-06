@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Terms — Corlate Technologies</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&family=Lexend+Deca:wght@300;400;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&family=Lexend+Deca:wght@300;400;600&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <header class="topbar topbar-fixed">
         <div class="topbar-inner">
@@ -14,12 +18,13 @@
                 <img src="Logo-1.png" alt="Corlate logo" class="logo-img">
                 <div class="company-name">CORLATE</div>
             </div>
-            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" onclick="toggleNav()">☰</button>
+            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"
+                onclick="toggleNav()">☰</button>
             <nav class="nav">
                 <a class="nav-link" href="index.html" onclick="closeNavIfOpen()">Home</a>
                 <a class="nav-link" href="services.html" onclick="closeNavIfOpen()">Services</a>
                 <a class="nav-link" href="contact.html" onclick="closeNavIfOpen()">Contact</a>
-                <button class="nav-cta chat-btn" type="button" onclick="openChat()">Chat</button>
+
             </nav>
         </div>
     </header>
@@ -32,8 +37,27 @@
     <main class="content">
         <section style="max-width:900px;margin:90px auto 40px;padding:20px;color:rgba(255,255,255,0.92);">
             <h1>Terms & Conditions</h1>
-            <p>This is a placeholder Terms & Conditions page. Replace with your full legal content before launch.</p>
-            <p>These terms are an example. For production, please consult legal counsel and populate this page with your actual terms.</p>
+            <p style="margin-top:20px;"><strong>Last Updated: February 6, 2026</strong></p>
+
+            <h3 style="margin-top:30px;color:#fff;">1. Introduction</h3>
+            <p>Welcome to Corlate Technologies. By accessing our website and using our services, you agree to comply
+                with and be bound by the following terms and conditions.</p>
+
+            <h3 style="margin-top:30px;color:#fff;">2. Services</h3>
+            <p>Corlate Technologies provides digital services including website development, SEO audits, and ongoing
+                technical support. All services are subject to a separate service agreement where applicable.</p>
+
+            <h3 style="margin-top:30px;color:#fff;">3. Intellectual Property</h3>
+            <p>The content, layout, design, data, and graphics on this website are protected by intellectual property
+                laws and are owned by Corlate Technologies, unless otherwise stated.</p>
+
+            <h3 style="margin-top:30px;color:#fff;">4. Limitation of Liability</h3>
+            <p>Corlate Technologies will not be liable for any damages arising from the use or inability to use this
+                website or our services, to the fullest extent permitted by law.</p>
+
+            <h3 style="margin-top:30px;color:#fff;">5. Contact Us</h3>
+            <p>If you have any questions about these Terms, please contact us at <a href="mailto:info@corlate.co.za"
+                    style="color:#05b9d8">info@corlate.co.za</a>.</p>
         </section>
     </main>
 
@@ -49,21 +73,37 @@
         </div>
     </footer>
 
+    <!-- Zoho Floating Button -->
+    <button class="zoho-float" onclick="openChat()" aria-label="Open Chat">
+        <svg viewBox="0 0 24 24" class="zoho-icon">
+            <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z" />
+        </svg>
+    </button>
+
     <div id="toast" class="toast" role="status" aria-live="polite" aria-atomic="true" aria-hidden="true"></div>
 
     <script>
-        // Minimal helpers used by site pages
-        window.showToast = function(msg, duration){ var t = document.getElementById('toast'); if(!t) return; t.textContent = msg; t.setAttribute('aria-hidden','false'); t.classList.add('show'); clearTimeout(window._toastTimeout); window._toastTimeout = setTimeout(function(){ t.classList.remove('show'); t.setAttribute('aria-hidden','true'); }, duration || 3200); };
-        document.addEventListener('DOMContentLoaded', function(){ var b = document.getElementById('siteBanner'); if(b){ if(localStorage.getItem('bannerDismissed')){ b.style.display='none'; document.body.classList.remove('has-banner'); } else { document.body.classList.add('has-banner'); } } });
-        window.dismissBanner = function(){ var b = document.getElementById('siteBanner'); if(!b) return; b.style.display='none'; document.body.classList.remove('has-banner'); localStorage.setItem('bannerDismissed','1'); };
+        // Minimal helpers
+        window.showToast = function (msg, duration) { var t = document.getElementById('toast'); if (!t) return; t.textContent = msg; t.setAttribute('aria-hidden', 'false'); t.classList.add('show'); clearTimeout(window._toastTimeout); window._toastTimeout = setTimeout(function () { t.classList.remove('show'); t.setAttribute('aria-hidden', 'true'); }, duration || 3200); };
+        document.addEventListener('DOMContentLoaded', function () { var b = document.getElementById('siteBanner'); if (b) { if (localStorage.getItem('bannerDismissed')) { b.style.display = 'none'; document.body.classList.add('banner-hidden'); } else { document.body.classList.remove('banner-hidden'); } } });
+        window.dismissBanner = function () { var b = document.getElementById('siteBanner'); if (!b) return; b.style.display = 'none'; document.body.classList.add('banner-hidden'); localStorage.setItem('bannerDismissed', '1'); };
 
-        // Nav helpers (simple reuse)
-        window.toggleNav = function(){ var nav = document.querySelector('.nav'); var toggle = document.querySelector('.nav-toggle'); if(!nav || !toggle) return; var isOpen = nav.classList.toggle('open'); toggle.setAttribute('aria-expanded', isOpen); if(isOpen){ document.addEventListener('click', window._navOutsideHandler = function onDocClick(e){ if(!nav.contains(e.target) && e.target !== toggle){ nav.classList.remove('open'); toggle.setAttribute('aria-expanded','false'); document.removeEventListener('click', window._navOutsideHandler); document.removeEventListener('keydown', window._navKeyHandler); } }); document.addEventListener('keydown', window._navKeyHandler = function onDocKey(e){ if(e.key === 'Escape' || e.key === 'Esc'){ nav.classList.remove('open'); toggle.setAttribute('aria-expanded','false'); document.removeEventListener('click', window._navOutsideHandler); document.removeEventListener('keydown', window._navKeyHandler); } }); } else { if(window._navOutsideHandler) document.removeEventListener('click', window._navOutsideHandler); if(window._navKeyHandler) document.removeEventListener('keydown', window._navKeyHandler); } };
-        window.closeNavIfOpen = function(){ var nav = document.querySelector('.nav'); var toggle = document.querySelector('.nav-toggle'); if(nav && nav.classList.contains('open')){ nav.classList.remove('open'); if(toggle) toggle.setAttribute('aria-expanded','false'); } };
+        window.toggleNav = function () { var nav = document.querySelector('.nav'); var toggle = document.querySelector('.nav-toggle'); if (!nav || !toggle) return; var isOpen = nav.classList.toggle('open'); toggle.setAttribute('aria-expanded', isOpen); if (isOpen) { document.addEventListener('click', window._navOutsideHandler = function onDocClick(e) { if (!nav.contains(e.target) && e.target !== toggle) { nav.classList.remove('open'); toggle.setAttribute('aria-expanded', 'false'); document.removeEventListener('click', window._navOutsideHandler); } }); } };
+        window.closeNavIfOpen = function () { var nav = document.querySelector('.nav'); if (nav && nav.classList.contains('open')) { nav.classList.remove('open'); var toggle = document.querySelector('.nav-toggle'); if (toggle) toggle.setAttribute('aria-expanded', 'false'); } };
 
-        window.openChat = function(){ if(window.showToast) showToast('Opening chat...',1800); if(window.$zoho && $zoho && $zoho.salesiq && $zoho.salesiq.initiate){ try{ $zoho.salesiq.initiate(); return; }catch(e){} } if(window.Zoho && Zoho.salesiq && Zoho.salesiq.show){ try{ Zoho.salesiq.show(); return; }catch(e){} } if(window.showToast) showToast('Chat unavailable',2400); };
+        window.openChat = function () {
+            if (window.$zoho && $zoho && $zoho.salesiq && $zoho.salesiq.initiate) {
+                try { $zoho.salesiq.initiate(); } catch (e) { window.location.hash = '#contact'; }
+            } else if (window.Zoho && Zoho.salesiq && Zoho.salesiq.show) {
+                try { Zoho.salesiq.show(); } catch (e) { window.location.hash = '#contact'; }
+            } else {
+                window.location.hash = '#contact';
+            }
+        };
     </script>
-<script>window.$zoho=window.$zoho || {};$zoho.salesiq=$zoho.salesiq||{ready:function(){}}</script>
-<script id="zsiqscript" src="https://salesiq.zohopublic.com/widget?wc=siq60a528476f7ac668adb68f724319ffc3" defer></script>
+    <script>window.$zoho = window.$zoho || {}; $zoho.salesiq = $zoho.salesiq || { ready: function () { } }</script>
+    <script id="zsiqscript" src="https://salesiq.zohopublic.com/widget?wc=siq60a528476f7ac668adb68f724319ffc3"
+        defer></script>
 </body>
+
 </html>
