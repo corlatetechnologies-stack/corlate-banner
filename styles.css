@@ -701,11 +701,17 @@ body.banner-hidden {
     padding: 20px 0;
 }
 
-.hero-left {
+.hero-left,
+.hero-center {
     text-align: left;
 }
 
-/* Headings use Poppins for a bold headline feel */
+.hero-minimal .hero-center {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
 h1,
 h2,
 h3,
