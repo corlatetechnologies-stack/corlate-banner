@@ -4,45 +4,117 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Services - Corlate</title>
-    <link rel="stylesheet" href="services.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&family=Lexend+Deca:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="nav-logo-link">
-                <div class="nav-logo">
-                    <div class="logo-circle"></div>
-                    <div class="logo-text">
-                        <span class="company-name">CORLATE</span>
-                        <span class="company-subtitle">TECHNOLOGIES</span>
-                    </div>
-                </div>
-            </a>
-            <div class="nav-buttons">
-                <a href="index.html" class="back-button">← Back to Home</a>
-                <a href="contact.html" class="contact-button">Contact Us</a>
-            </div>
-        </div>
-    </nav>
+    <!-- Animated background elements (same as home) -->
+    <div class="circuit-container">
+        <div class="circuit-line line-1"></div>
+        <div class="circuit-line line-2"></div>
+        <div class="circuit-line line-3"></div>
+        <div class="circuit-line line-4"></div>
+        <div class="circuit-line line-5"></div>
+        <div class="circuit-line line-6"></div>
+        <div class="circuit-line line-7"></div>
+        <div class="circuit-line line-8"></div>
+        <div class="circuit-line line-9"></div>
+        <div class="circuit-line line-10"></div>
+        <div class="circuit-line line-11"></div>
+        <div class="circuit-line line-12"></div>
+        
+        <div class="node node-1"></div>
+        <div class="node node-2"></div>
+        <div class="node node-3"></div>
+        <div class="node node-4"></div>
+        <div class="node node-5"></div>
+        <div class="node node-6"></div>
+        <div class="node node-7"></div>
+        <div class="node node-8"></div>
+        <div class="node node-9"></div>
+        <div class="node node-10"></div>
+        <div class="node node-11"></div>
+        <div class="node node-12"></div>
+        <div class="node node-13"></div>
+        <div class="node node-14"></div>
+        <div class="node node-15"></div>
+        <div class="node node-16"></div>
+        <div class="node node-17"></div>
+        <div class="node node-18"></div>
+        
+        <div class="dot dot-1"></div>
+        <div class="dot dot-2"></div>
+        <div class="dot dot-3"></div>
+        <div class="dot dot-4"></div>
+        <div class="dot dot-5"></div>
+        <div class="dot dot-6"></div>
+        <div class="dot dot-7"></div>
+        <div class="dot dot-8"></div>
+        <div class="dot dot-9"></div>
+        <div class="dot dot-10"></div>
+        <div class="dot dot-11"></div>
+        <div class="dot dot-12"></div>
+        <div class="dot dot-13"></div>
+        <div class="dot dot-14"></div>
+        <div class="dot dot-15"></div>
+        <div class="dot dot-16"></div>
+        <div class="dot dot-17"></div>
+        <div class="dot dot-18"></div>
+        <div class="dot dot-19"></div>
+        <div class="dot dot-20"></div>
+        <div class="dot dot-21"></div>
+        <div class="dot dot-22"></div>
+        <div class="dot dot-23"></div>
+        <div class="dot dot-24"></div>
+        <div class="dot dot-25"></div>
+    </div>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1 class="hero-title">Our Services</h1>
-            <p class="hero-subtitle">Comprehensive digital solutions to elevate your business</p>
+    <header class="topbar topbar-fixed">
+        <div class="topbar-inner">
+            <div class="logo logo-compact">
+                <img src="Logo-1.png" alt="Corlate logo" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                <div class="logo-circle" style="display:none"></div>
+                <div class="company-name">CORLATE</div>
+            </div>
+            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" onclick="toggleNav()">☰</button>
+            <nav class="nav">
+                <a class="nav-link" href="index.html" onclick="closeNavIfOpen()">Home</a>
+                <a class="nav-link" href="services.html" onclick="closeNavIfOpen()">Services</a>
+                <a class="nav-link" href="contact.html" onclick="closeNavIfOpen()">Contact</a>
+                <button class="nav-cta chat-btn" type="button" onclick="openChat()">Chat</button>
+            </nav>
         </div>
-        <div class="hero-background">
-            <div class="circuit-container">
-                <div class="circuit-line line-1"></div>
-                <div class="circuit-line line-2"></div>
-                <div class="circuit-line line-3"></div>
-                <div class="circuit-line line-4"></div>
-                <div class="circuit-line line-5"></div>
-                <div class="circuit-line line-6"></div>
+    </header>
+
+    <!-- Hero Section (polished to match homepage) -->
+    <section class="hero hero-polished">
+        <div class="hero-left fade-up">
+            <h1 class="main-title">Services that drive measurable growth</h1>
+            <p class="lead">Focused digital solutions: websites, SEO, marketing, and ongoing support to increase leads and conversions.</p>
+
+            <div class="hero-ctas">
+                <button class="btn primary-cta" onclick="openAuditModal()">Request Free Audit</button>
+                <a class="btn outline-cta" href="#contact" onclick="closeNavIfOpen()">Contact Sales</a>
+            </div>
+
+            <div class="trust-row" aria-hidden="true" style="margin-top:14px;">
+                <div class="trust-item"><strong>+150</strong><span>Clients</span></div>
+                <div class="trust-item"><strong>3x</strong><span>Avg lead uplift</span></div>
             </div>
         </div>
-    </section>
+
+        <div class="hero-right fade-up delay">
+            <div class="card compact">
+                <h4>Website Development</h4>
+                <p>Responsive, conversion-focused sites built to perform.</p>
+            </div>
+
+            <div class="card compact">
+                <h4>Marketing & SEO</h4>
+                <p>Targeted campaigns and SEO to grow traffic and leads.</p>
+            </div>
+        </div>
+    </section> 
 
     <!-- Services Grid -->
     <section class="services-section">
@@ -58,7 +130,7 @@
                     </div>
                     <h3>Website Development</h3>
                 </div>
-                <p class="service-description">Custom, responsive websites tailored to your business needs using modern technologies and best practices.</p>
+                <p class="service-description">Custom, responsive websites that convert visitors into leads.</p>
                 <ul class="service-features">
                     <li>Responsive Design</li>
                     <li>Modern UI/UX</li>
@@ -79,7 +151,7 @@
                     </div>
                     <h3>Marketing & SEO</h3>
                 </div>
-                <p class="service-description">Boost your online presence and reach more customers with our comprehensive digital marketing strategies.</p>
+                <p class="service-description">Marketing & SEO that attracts quality leads and improves visibility.</p>
                 <ul class="service-features">
                     <li>Search Engine Optimization</li>
                     <li>Google Ads Management</li>
@@ -177,11 +249,45 @@
         </div>
     </section>
 
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-left">© Corlate Technologies 2026. All rights reserved.
+                <div class="footer-note">We are building this site — some content may be provisional.</div>
+            </div>
+            <div class="footer-right">
+                <a href="privacy.html" class="footer-link">Privacy</a>
+                <a href="terms.html" class="footer-link">Terms</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Small nav script -->
+    <script>
+      // Replace mobile nav toggle & accessible behavior
+      window.toggleNav = function(){ var nav = document.querySelector('.nav'); var toggle = document.querySelector('.nav-toggle'); if(!nav || !toggle) return; var isOpen = nav.classList.toggle('open'); toggle.setAttribute('aria-expanded', isOpen); if(isOpen){ // close on outside click document.addEventListener('click', window._navOutsideHandler = function onDocClick(e){ if(!nav.contains(e.target) && e.target !== toggle){ nav.classList.remove('open'); toggle.setAttribute('aria-expanded','false'); document.removeEventListener('click', window._navOutsideHandler); document.removeEventListener('keydown', window._navKeyHandler); } }); // close on Escape document.addEventListener('keydown', window._navKeyHandler = function onDocKey(e){ if(e.key === 'Escape' || e.key === 'Esc'){ nav.classList.remove('open'); toggle.setAttribute('aria-expanded','false'); document.removeEventListener('click', window._navOutsideHandler); document.removeEventListener('keydown', window._navKeyHandler); } }); } else { if(window._navOutsideHandler) document.removeEventListener('click', window._navOutsideHandler); if(window._navKeyHandler) document.removeEventListener('keydown', window._navKeyHandler); } };
+      window.closeNavIfOpen = function(){ var nav = document.querySelector('.nav'); var toggle = document.querySelector('.nav-toggle'); if(nav && nav.classList.contains('open')){ nav.classList.remove('open'); if(toggle) toggle.setAttribute('aria-expanded','false'); } };
+
+      // Open Chat: do NOT call Zoho directly — show guidance and navigate to contact page
+      window.openChat = function(){ if(window.showToast) showToast('Please use the contact form or email us — chat is not enabled.', 3200); setTimeout(function(){ window.location.href = 'contact.html#contact'; }, 700); };
+
+      // Toast helper
+      window.showToast = function(msg, duration){ var t = document.getElementById('toast'); if(!t) return; t.textContent = msg; t.setAttribute('aria-hidden','false'); t.classList.add('show'); clearTimeout(window._toastTimeout); window._toastTimeout = setTimeout(function(){ t.classList.remove('show'); t.setAttribute('aria-hidden','true'); }, duration || 3200); };
+
+      // Site banner handling
+      document.addEventListener('DOMContentLoaded', function(){ var b = document.getElementById('siteBanner'); if(b){ if(localStorage.getItem('bannerDismissed')){ b.style.display='none'; document.body.classList.add('banner-hidden'); } else { document.body.classList.remove('banner-hidden'); } } });
+      window.dismissBanner = function(){ var b = document.getElementById('siteBanner'); if(!b) return; b.style.display='none'; document.body.classList.add('banner-hidden'); localStorage.setItem('bannerDismissed','1'); };
+    </script>
+
     <!-- WhatsApp Floating Button -->
     <a href="https://wa.me/27793241570" target="_blank" class="whatsapp-float" title="Contact us on WhatsApp">
         <svg viewBox="0 0 32 32" class="whatsapp-icon">
             <path fill="currentColor" d="M16 0c-8.837 0-16 7.163-16 16 0 2.825 0.737 5.607 2.137 8.048l-2.137 7.952 7.933-2.127c2.42 1.396 5.169 2.127 8.067 2.127 8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 29.467c-2.482 0-4.908-0.646-7.07-1.87l-0.507-0.292-5.193 1.393 1.404-5.227-0.321-0.527c-1.305-2.136-1.996-4.601-1.996-7.145 0-7.444 6.056-13.5 13.5-13.5s13.5 6.056 13.5 13.5-6.056 13.5-13.5 13.5zM21.803 19.275c-0.363-0.182-2.142-1.058-2.475-1.179s-0.575-0.182-0.817 0.182c-0.242 0.363-0.938 1.179-1.15 1.421s-0.425 0.272-0.788 0.091c-0.363-0.182-1.533-0.565-2.92-1.803-1.08-0.963-1.809-2.153-2.021-2.516s-0.022-0.559 0.159-0.74c0.164-0.163 0.363-0.425 0.545-0.637s0.242-0.363 0.363-0.606 0.060-0.454-0.030-0.637c-0.091-0.182-0.817-1.968-1.12-2.697-0.295-0.71-0.595-0.614-0.817-0.625-0.212-0.010-0.454-0.012-0.696-0.012s-0.637 0.091-0.97 0.454c-0.333 0.363-1.272 1.243-1.272 3.029s1.302 3.513 1.484 3.755c0.182 0.242 2.567 3.92 6.218 5.497 0.868 0.375 1.546 0.6 2.074 0.768 0.872 0.277 1.665 0.238 2.293 0.144 0.699-0.104 2.142-0.876 2.444-1.721s0.302-1.572 0.212-1.721c-0.091-0.15-0.333-0.242-0.696-0.425z"/>
         </svg>
     </a>
+<script>window.$zoho=window.$zoho || {};$zoho.salesiq=$zoho.salesiq||{ready:function(){}}</script>
+<script id="zsiqscript" src="https://salesiq.zohopublic.com/widget?wc=siq60a528476f7ac668adb68f724319ffc3" defer></script>
+
+    <div id="toast" class="toast" role="status" aria-live="polite" aria-atomic="true" aria-hidden="true"></div>
 </body>
 </html>

@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Corlate Technologies - Coming Soon</title>
+    <title>Corlate Technologies - Launching Soon — Get Early Access</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&family=Lexend+Deca:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -71,32 +72,293 @@
         
         <!-- Content -->
         <div class="content">
-            <div class="logo">
-                <div class="logo-circle"></div>
-                <div class="logo-text">
-                    <span class="company-name">CORLATE</span>
-                    <span class="company-subtitle">TECHNOLOGIES</span>
+            <header class="topbar topbar-fixed">
+                <div class="topbar-inner">
+                    <div class="logo logo-compact">
+                        <img src="Logo-1.png" alt="Corlate logo" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                        <div class="logo-circle" style="display:none" aria-hidden="true"></div>
+                        <div class="company-name">CORLATE</div>
+                    </div>
+                    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" onclick="toggleNav()">☰</button>
+                    <nav class="nav">
+                        <a class="nav-link" href="index.html" onclick="closeNavIfOpen()">Home</a>
+                        <a class="nav-link" href="services.html" onclick="closeNavIfOpen()">Services</a>
+                        <a class="nav-link" href="contact.html" onclick="closeNavIfOpen()">Contact</a>
+                        <button class="nav-cta chat-btn" type="button" onclick="openChat()">Chat</button>
+                    </nav>
                 </div>
+            </header>
+
+            <div class="site-banner" id="siteBanner" role="region" aria-live="polite" aria-label="Site status">
+                <span>We're still building this site — some content may be provisional.</span>
+                <button class="banner-close" aria-label="Dismiss site status" onclick="dismissBanner()">×</button>
             </div>
-            
-            <h1 class="main-title">COMING SOON</h1>
-            
-            <div class="buttons">
-                <a href="services.html" class="btn services-btn">View Services</a>
-                <a href="contact.html" class="btn contact-btn">Contact Us</a>
-            </div>
-            
-            <!-- Services Section -->
-            
+
+            <div class="hero hero-polished">
+                <div class="hero-left fade-up">
+                    <h1 class="main-title">Websites & Systems That Drive Growth</h1>
+                    <p class="lead">High-performing sites that convert—book a free audit.</p>
+
+                    <div class="trust-row" aria-hidden="true">
+                        <div class="trust-item"><strong>+150</strong><span>Clients</span></div>
+                        <div class="trust-item"><strong>3x</strong><span>Avg lead uplift</span></div>
+                        <div class="trust-item accent"><strong>Free</strong><span>Audit (Limited)</span></div>
+                    </div>
+
+                    <div class="hero-ctas">
+                        <button class="btn primary-cta" type="button" onclick="openAuditModal()">Request Free Audit</button>
+                        <button class="btn outline-cta" type="button" onclick="openChat()">Chat with us</button>
+                    </div>
+
+                    <p class="micro-trust">Trusted by growing businesses — we measure success by leads and conversions, not vanity metrics.</p>
+                </div>
+
+                <div class="hero-right fade-up delay">
+                    <div class="card compact">
+                        <h4>Free Website Audit</h4>
+                        <p>Actionable report highlighting drop-off points and priority fixes to boost conversions.</p>
+                        <div style="margin-top:10px;"><button class="btn small services-btn" onclick="openAuditModal()">Get Audit</button></div>
+                    </div>
+
+                    <div class="card compact">
+                        <h4>Trusted Results</h4>
+                        <p>Clients typically see measurable lead and conversion improvements within weeks.</p>
+                    </div>
+
+                </div>
+            </div>     
+
+            <!-- Free Website Audit (minimal) -->
+            <section id="free-audit" class="audit-section audit-minimal">
+                <div class="audit-inner">
+                    <div class="audit-left">
+                        <h2>Free Website Audit</h2>
+                        <p class="audit-lead">A focused, actionable report highlighting priority fixes to improve conversions. Limited free slots.</p>
+
+                        <div class="audit-ctas">
+                            <button id="auditOpen" class="btn primary-cta" aria-controls="auditModal" aria-expanded="false" onclick="openAuditModal()">Request Free Audit</button>
+                        </div>
+
+                        <div class="audit-note">No cost. Limited availability.</div>
+                    </div>
+                </div>
+            </section> 
+
+            <!-- Contact Us -->
+            <section id="contact" class="contact-section">
+                <div class="contact-inner">
+                    <h2>Contact Us</h2>
+                    <p>Let’s talk about how we can improve your website and grow your business online. Reach out for audits, consultations, or ongoing digital support.</p>
+
+                    <div class="contact-cards">
+                        <div class="contact-card card">
+                            <h4>Phone</h4>
+                            <p>📞 +27 79 324 1570</p>
+                        </div>
+                        <div class="contact-card card">
+                            <h4>Email</h4>
+                            <p>📧 <a href="mailto:info@corlate.co.za">info@corlate.co.za</a></p>
+                        </div>
+                        <div class="contact-card card">
+                            <h4>Website</h4>
+                            <p>🌐 <a href="https://www.corlate.co.za">www.corlate.co.za</a></p>
+                        </div>
+                    </div>
+
+                    <p class="chat-reminder">Prefer chatting? Use the live chat — we respond quickly.</p>
+                </div>
+            </section>
+
         </div>
         
     </div>
     
+    <!-- WhatsApp Floating Button -->
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-left">© Corlate Technologies 2026. All rights reserved.
+                <div class="footer-note">We are building this site — some content may be provisional.</div>
+            </div>
+            <div class="footer-right">
+                <a href="privacy.html" class="footer-link">Privacy</a>
+                <a href="terms.html" class="footer-link">Terms</a>
+            </div>
+        </div>
+    </footer>
+
     <!-- WhatsApp Floating Button -->
     <a href="https://wa.me/27793241570" target="_blank" class="whatsapp-float" title="Contact us on WhatsApp">
         <svg viewBox="0 0 32 32" class="whatsapp-icon">
             <path fill="currentColor" d="M16 0c-8.837 0-16 7.163-16 16 0 2.825 0.737 5.607 2.137 8.048l-2.137 7.952 7.933-2.127c2.42 1.396 5.169 2.127 8.067 2.127 8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 29.467c-2.482 0-4.908-0.646-7.07-1.87l-0.507-0.292-5.193 1.393 1.404-5.227-0.321-0.527c-1.305-2.136-1.996-4.601-1.996-7.145 0-7.444 6.056-13.5 13.5-13.5s13.5 6.056 13.5 13.5-6.056 13.5-13.5 13.5zM21.803 19.275c-0.363-0.182-2.142-1.058-2.475-1.179s-0.575-0.182-0.817 0.182c-0.242 0.363-0.938 1.179-1.15 1.421s-0.425 0.272-0.788 0.091c-0.363-0.182-1.533-0.565-2.92-1.803-1.08-0.963-1.809-2.153-2.021-2.516s-0.022-0.559 0.159-0.74c0.164-0.163 0.363-0.425 0.545-0.637s0.242-0.363 0.363-0.606 0.060-0.454-0.030-0.637c-0.091-0.182-0.817-1.968-1.12-2.697-0.295-0.71-0.595-0.614-0.817-0.625-0.212-0.010-0.454-0.012-0.696-0.012s-0.637 0.091-0.97 0.454c-0.333 0.363-1.272 1.243-1.272 3.029s1.302 3.513 1.484 3.755c0.182 0.242 2.567 3.92 6.218 5.497 0.868 0.375 1.546 0.6 2.074 0.768 0.872 0.277 1.665 0.238 2.293 0.144 0.699-0.104 2.142-0.876 2.444-1.721s0.302-1.572 0.212-1.721c-0.091-0.15-0.333-0.242-0.696-0.425z"/>
         </svg>
     </a>
+
+    <script>
+    (function(){
+      window.handleSubscribe = function(e){
+        e.preventDefault();
+        var email = e.target.email.value;
+        // TODO: wire this to your backend or an email provider
+        if(window.showToast) showToast('Thanks! We will notify ' + email + ' when we launch.', 3200);
+      window.openChat = function(){
+        if(window.$zoho && $zoho && $zoho.salesiq && $zoho.salesiq.initiate) {
+          // If you've added Zoho SalesIQ script, this should open the chat
+          try { $zoho.salesiq.initiate(); } catch(e) { window.location.hash = '#contact'; }
+        } else if(window.Zoho && Zoho.salesiq && Zoho.salesiq.show) {
+          try { Zoho.salesiq.show(); } catch(e) { window.location.hash = '#contact'; }
+        } else {
+          // fallback
+          window.location.hash = '#contact';
+        }
+      };
+
+      // Audit modal handlers with focus management and accessible close behavior
+      (function(){
+        var lastActiveEl = null;
+        var modal = document.getElementById('auditModal');
+        var modalPanel = modal ? modal.querySelector('.modal-panel') : null;
+        var auditOpenBtn = document.getElementById('auditOpen');
+
+        window.openAuditModal = function(){
+          if(!modal) return;
+          lastActiveEl = document.activeElement;
+          modal.setAttribute('aria-hidden','false');
+          modal.style.display = 'flex';
+          if(auditOpenBtn) auditOpenBtn.setAttribute('aria-expanded','true');
+          // focus first input
+          var first = modal.querySelector('input[name]');
+          if(first) first.focus();
+
+          // outside click closes
+          document.addEventListener('click', window._auditOutside = function onDocClick(e){
+            if(!modalPanel.contains(e.target) && e.target !== auditOpenBtn){ closeAuditModal(); }
+          });
+          // Escape closes & trap focus
+          document.addEventListener('keydown', window._auditKey = function onKey(e){
+            if(e.key === 'Escape' || e.key === 'Esc'){ closeAuditModal(); }
+            if(e.key === 'Tab'){
+              // basic focus trap
+              var focusable = modal.querySelectorAll('a[href], button, textarea, input, [tabindex]:not([tabindex="-1"])');
+              focusable = Array.prototype.slice.call(focusable).filter(function(el){ return !el.disabled && el.offsetParent !== null; });
+              if(focusable.length === 0) return;
+              var firstEl = focusable[0], lastEl = focusable[focusable.length-1];
+              if(e.shiftKey && document.activeElement === firstEl){ lastEl.focus(); e.preventDefault(); }
+              else if(!e.shiftKey && document.activeElement === lastEl){ firstEl.focus(); e.preventDefault(); }
+            }
+          });
+        };
+
+        window.closeAuditModal = function(){
+          if(!modal) return;
+          modal.setAttribute('aria-hidden','true');
+          modal.style.display = 'none';
+          if(auditOpenBtn) auditOpenBtn.setAttribute('aria-expanded','false');
+          if(lastActiveEl) lastActiveEl.focus();
+          if(window._auditOutside) document.removeEventListener('click', window._auditOutside);
+          if(window._auditKey) document.removeEventListener('keydown', window._auditKey);
+        };
+      })();
+
+      window.handleAuditSubmit = function(e){
+        e.preventDefault();
+        var form = document.getElementById('auditForm');
+        var submitBtn = document.getElementById('auditSubmit');
+        var status = document.getElementById('auditStatus');
+        var global = document.getElementById('globalLive');
+
+        // Basic disable to avoid double submits
+        if(submitBtn){ submitBtn.disabled = true; submitBtn.setAttribute('aria-disabled','true'); }
+
+        // Collect data and POST to endpoint (TODO)
+        var data = new FormData(form);
+        // TODO: POST `data` to your Zoho Form/CRM endpoint here
+
+        // Simulate successful submit and announce it
+        setTimeout(function(){
+          var msg = 'Thanks — we received your audit request. We will be in touch within 2 business days.';
+          if(status){ status.textContent = msg; status.hidden = false; status.style.display = 'block'; status.focus(); }
+          if(global){ global.textContent = msg; }
+
+          // lightweight toast confirmation
+          if(window.showToast) showToast(msg, 3200);
+
+          form.reset();
+          if(submitBtn){ submitBtn.disabled = false; submitBtn.removeAttribute('aria-disabled'); }
+
+          // Auto-close after a short delay and restore focus
+          setTimeout(function(){ closeAuditModal(); }, 2200);
+        }, 600);
+
+        return false;
+      };
+
+      // Start with modal hidden
+      document.addEventListener('DOMContentLoaded', function(){
+        var m = document.getElementById('auditModal');
+        if(m){ m.style.display = 'none'; }
+
+        // Banner visibility & page offset
+        var b = document.getElementById('siteBanner');
+        if(b){
+          if(localStorage.getItem('bannerDismissed')){ b.style.display = 'none'; document.body.classList.add('banner-hidden'); }
+          else { document.body.classList.remove('banner-hidden'); }
+        }
+      });
+
+      // Mobile nav toggle & accessible behavior
+      window.toggleNav = function(){
+        var nav = document.querySelector('.nav');
+        var toggle = document.querySelector('.nav-toggle');
+        if(!nav || !toggle) return;
+        var isOpen = nav.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', isOpen);
+        if(isOpen){
+          // close on outside click
+          document.addEventListener('click', window._navOutsideHandler = function onDocClick(e){
+            if(!nav.contains(e.target) && e.target !== toggle){
+              nav.classList.remove('open');
+              toggle.setAttribute('aria-expanded','false');
+              document.removeEventListener('click', window._navOutsideHandler);
+              document.removeEventListener('keydown', window._navKeyHandler);
+            }
+          });
+          // close on Escape
+          document.addEventListener('keydown', window._navKeyHandler = function onDocKey(e){
+            if(e.key === 'Escape' || e.key === 'Esc'){
+              nav.classList.remove('open');
+              toggle.setAttribute('aria-expanded','false');
+              document.removeEventListener('click', window._navOutsideHandler);
+              document.removeEventListener('keydown', window._navKeyHandler);
+            }
+          });
+        } else {
+          // cleanup handlers if closing via toggle
+          if(window._navOutsideHandler) document.removeEventListener('click', window._navOutsideHandler);
+          if(window._navKeyHandler) document.removeEventListener('keydown', window._navKeyHandler);
+        }
+      };
+      window.closeNavIfOpen = function(){
+        var nav = document.querySelector('.nav');
+        var toggle = document.querySelector('.nav-toggle');
+        if(nav && nav.classList.contains('open')){ nav.classList.remove('open'); if(toggle) toggle.setAttribute('aria-expanded','false'); }
+      };
+
+      // Toast helper
+      window.showToast = function(msg, duration){
+        var t = document.getElementById('toast'); if(!t) return; t.textContent = msg; t.setAttribute('aria-hidden','false'); t.classList.add('show'); clearTimeout(window._toastTimeout); window._toastTimeout = setTimeout(function(){ t.classList.remove('show'); t.setAttribute('aria-hidden','true'); }, duration || 3200);
+      };
+
+      // Site banner handling
+      document.addEventListener('DOMContentLoaded', function(){ var b = document.getElementById('siteBanner'); if(b && localStorage.getItem('bannerDismissed')) b.style.display='none'; });
+      window.dismissBanner = function(){ var b = document.getElementById('siteBanner'); if(!b) return; b.style.display='none'; document.body.classList.remove('has-banner'); localStorage.setItem('bannerDismissed','1'); };
+
+    })();
+    </script>
+<script>window.$zoho=window.$zoho || {};$zoho.salesiq=$zoho.salesiq||{ready:function(){}}</script>
+<script id="zsiqscript" src="https://salesiq.zohopublic.com/widget?wc=siq60a528476f7ac668adb68f724319ffc3" defer></script>
+
+    <div id="toast" class="toast" role="status" aria-live="polite" aria-atomic="true" aria-hidden="true"></div>
 </body>
-</html>
+</html> 
