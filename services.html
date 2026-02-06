@@ -12,279 +12,311 @@
 </head>
 
 <body>
-    <!-- Animated background elements (same as home) -->
-    <div class="circuit-container">
-        <div class="circuit-line line-1"></div>
-        <div class="circuit-line line-2"></div>
-        <div class="circuit-line line-3"></div>
-        <div class="circuit-line line-4"></div>
-        <div class="circuit-line line-5"></div>
-        <div class="circuit-line line-6"></div>
-        <div class="circuit-line line-7"></div>
-        <div class="circuit-line line-8"></div>
-        <div class="circuit-line line-9"></div>
-        <div class="circuit-line line-10"></div>
-        <div class="circuit-line line-11"></div>
-        <div class="circuit-line line-12"></div>
+    <div class="services-container">
+        <!-- Animated background elements (same as home) -->
+        <div class="circuit-container">
+            <div class="circuit-line line-1"></div>
+            <div class="circuit-line line-2"></div>
+            <div class="circuit-line line-3"></div>
+            <div class="circuit-line line-4"></div>
+            <div class="circuit-line line-5"></div>
+            <div class="circuit-line line-6"></div>
+            <div class="circuit-line line-7"></div>
+            <div class="circuit-line line-8"></div>
+            <div class="circuit-line line-9"></div>
+            <div class="circuit-line line-10"></div>
+            <div class="circuit-line line-11"></div>
+            <div class="circuit-line line-12"></div>
 
-        <div class="node node-1"></div>
-        <div class="node node-2"></div>
-        <div class="node node-3"></div>
-        <div class="node node-4"></div>
-        <div class="node node-5"></div>
-        <div class="node node-6"></div>
-        <div class="node node-7"></div>
-        <div class="node node-8"></div>
-        <div class="node node-9"></div>
-        <div class="node node-10"></div>
-        <div class="node node-11"></div>
-        <div class="node node-12"></div>
-        <div class="node node-13"></div>
-        <div class="node node-14"></div>
-        <div class="node node-15"></div>
-        <div class="node node-16"></div>
-        <div class="node node-17"></div>
-        <div class="node node-18"></div>
+            <div class="node node-1"></div>
+            <div class="node node-2"></div>
+            <div class="node node-3"></div>
+            <div class="node node-4"></div>
+            <div class="node node-5"></div>
+            <div class="node node-6"></div>
+            <div class="node node-7"></div>
+            <div class="node node-8"></div>
+            <div class="node node-9"></div>
+            <div class="node node-10"></div>
+            <div class="node node-11"></div>
+            <div class="node node-12"></div>
+            <div class="node node-13"></div>
+            <div class="node node-14"></div>
+            <div class="node node-15"></div>
+            <div class="node node-16"></div>
+            <div class="node node-17"></div>
+            <div class="node node-18"></div>
 
-        <div class="dot dot-1"></div>
-        <div class="dot dot-2"></div>
-        <div class="dot dot-3"></div>
-        <div class="dot dot-4"></div>
-        <div class="dot dot-5"></div>
-        <div class="dot dot-6"></div>
-        <div class="dot dot-7"></div>
-        <div class="dot dot-8"></div>
-        <div class="dot dot-9"></div>
-        <div class="dot dot-10"></div>
-        <div class="dot dot-11"></div>
-        <div class="dot dot-12"></div>
-        <div class="dot dot-13"></div>
-        <div class="dot dot-14"></div>
-        <div class="dot dot-15"></div>
-        <div class="dot dot-16"></div>
-        <div class="dot dot-17"></div>
-        <div class="dot dot-18"></div>
-        <div class="dot dot-19"></div>
-        <div class="dot dot-20"></div>
-        <div class="dot dot-21"></div>
-        <div class="dot dot-22"></div>
-        <div class="dot dot-23"></div>
-        <div class="dot dot-24"></div>
-        <div class="dot dot-25"></div>
+            <div class="dot dot-1"></div>
+            <div class="dot dot-2"></div>
+            <div class="dot dot-3"></div>
+            <div class="dot dot-4"></div>
+            <div class="dot dot-5"></div>
+            <div class="dot dot-6"></div>
+            <div class="dot dot-7"></div>
+            <div class="dot dot-8"></div>
+            <div class="dot dot-9"></div>
+            <div class="dot dot-10"></div>
+            <div class="dot dot-11"></div>
+            <div class="dot dot-12"></div>
+            <div class="dot dot-13"></div>
+            <div class="dot dot-14"></div>
+            <div class="dot dot-15"></div>
+            <div class="dot dot-16"></div>
+            <div class="dot dot-17"></div>
+            <div class="dot dot-18"></div>
+            <div class="dot dot-19"></div>
+            <div class="dot dot-20"></div>
+            <div class="dot dot-21"></div>
+            <div class="dot dot-22"></div>
+            <div class="dot dot-23"></div>
+            <div class="dot dot-24"></div>
+            <div class="dot dot-25"></div>
+        </div>
+
+        <header class="topbar topbar-fixed">
+            <div class="topbar-inner">
+                <div class="logo logo-compact">
+                    <img src="Logo-1.png" alt="Corlate logo" class="logo-img"
+                        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                    <div class="logo-circle" style="display:none"></div>
+                    <div class="company-name">CORLATE</div>
+                </div>
+                <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"
+                    onclick="toggleNav()">☰</button>
+                <nav class="nav">
+                    <a class="nav-link" href="index.html" onclick="closeNavIfOpen()">Home</a>
+                    <a class="nav-link" href="services.html" onclick="closeNavIfOpen()">Services</a>
+                    <a class="nav-link" href="contact.html" onclick="closeNavIfOpen()">Contact</a>
+
+                </nav>
+            </div>
+        </header>
+
+        <!-- Hero Section (polished to match homepage) -->
+        <section class="hero hero-polished">
+            <div class="hero-left fade-up">
+                <h1 class="main-title">Services that drive measurable growth</h1>
+                <p class="lead">Focused digital solutions: websites, SEO, marketing, and ongoing support to increase
+                    leads
+                    and conversions.</p>
+
+                <div class="hero-ctas">
+                    <button class="btn primary-cta" onclick="openAuditModal()">Request Free Audit</button>
+                    <a class="btn outline-cta" href="contact.html" onclick="closeNavIfOpen()">Contact Sales</a>
+                </div>
+
+                <div class="trust-row" aria-hidden="true" style="margin-top:14px;">
+                    <div class="trust-item"><strong>+150</strong><span>Clients</span></div>
+                    <div class="trust-item"><strong>3x</strong><span>Avg lead uplift</span></div>
+                </div>
+            </div>
+
+            <div class="hero-right fade-up delay">
+                <div class="card compact">
+                    <h4>Website Development</h4>
+                    <p>Responsive, conversion-focused sites built to perform.</p>
+                </div>
+
+                <div class="card compact">
+                    <h4>Marketing & SEO</h4>
+                    <p>Targeted campaigns and SEO to grow traffic and leads.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Grid -->
+        <section class="services-section">
+            <div class="container">
+                <!-- Website Development -->
+                <div class="service-card featured">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="3" width="20" height="14" rx="2" />
+                                <path d="M8 21h8M12 17v4" />
+                            </svg>
+                        </div>
+                        <h3>Website Development</h3>
+                    </div>
+                    <p class="service-description">Custom, responsive websites that convert visitors into leads.</p>
+                    <ul class="service-features">
+                        <li>Responsive Design</li>
+                        <li>Modern UI/UX</li>
+                        <li>SEO Optimized</li>
+                        <li>Fast Loading</li>
+                        <li>Mobile First</li>
+                    </ul>
+                </div>
+
+                <!-- Marketing & SEO -->
+                <div class="service-card featured">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M3 3v18h18" />
+                                <path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3" />
+                            </svg>
+                        </div>
+                        <h3>Marketing & SEO</h3>
+                    </div>
+                    <p class="service-description">Marketing & SEO that attracts quality leads and improves visibility.
+                    </p>
+                    <ul class="service-features">
+                        <li>Search Engine Optimization</li>
+                        <li>Google Ads Management</li>
+                        <li>Social Media Marketing</li>
+                        <li>Content Strategy</li>
+                        <li>Analytics & Reporting</li>
+                    </ul>
+                </div>
+
+                <!-- Support & Maintenance -->
+                <div class="service-card featured">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                                <path d="M9 12l2 2 4-4" />
+                            </svg>
+                        </div>
+                        <h3>Support & Maintenance</h3>
+                    </div>
+                    <p class="service-description">Reliable ongoing support to keep your website running smoothly with
+                        regular updates and security monitoring.</p>
+                    <ul class="service-features">
+                        <li>24/7 Monitoring</li>
+                        <li>Regular Updates</li>
+                        <li>Security Patches</li>
+                        <li>Backup Management</li>
+                        <li>Performance Optimization</li>
+                    </ul>
+                </div>
+
+                <!-- Free Website Audit -->
+                <div class="service-card featured">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
+                                <path d="M14 2v6h6M16 13H8M16 17H8M10 9H8" />
+                            </svg>
+                        </div>
+                        <h3>Free Website Audit</h3>
+                        <span class="free-badge">FREE</span>
+                    </div>
+                    <p class="service-description">Get a comprehensive analysis of your website's performance, SEO, and
+                        user
+                        experience at no cost.</p>
+                    <ul class="service-features">
+                        <li>Performance Analysis</li>
+                        <li>SEO Assessment</li>
+                        <li>Mobile Compatibility</li>
+                        <li>Security Check</li>
+                        <li>Improvement Recommendations</li>
+                    </ul>
+                </div>
+
+                <!-- E-commerce Solutions -->
+                <div class="service-card featured">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="9" cy="21" r="1" />
+                                <circle cx="20" cy="21" r="1" />
+                                <path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6" />
+                            </svg>
+                        </div>
+                        <h3>E-commerce Solutions</h3>
+                    </div>
+                    <p class="service-description">Complete online store solutions with secure payment processing and
+                        inventory management.</p>
+                    <ul class="service-features">
+                        <li>Online Store Setup</li>
+                        <li>Payment Integration</li>
+                        <li>Inventory Management</li>
+                        <li>Order Processing</li>
+                        <li>Customer Management</li>
+                    </ul>
+                </div>
+
+                <!-- Custom Applications -->
+                <div class="service-card featured">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="16 18 22 12 16 6" />
+                                <polyline points="8 6 2 12 8 18" />
+                            </svg>
+                        </div>
+                        <h3>Custom Applications</h3>
+                    </div>
+                    <p class="service-description">Bespoke web applications and software solutions designed specifically
+                        for
+                        your business requirements.</p>
+                    <ul class="service-features">
+                        <li>Custom Development</li>
+                        <li>Database Design</li>
+                        <li>API Integration</li>
+                        <li>User Management</li>
+                        <li>Scalable Architecture</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Footer -->
+        <footer class="site-footer">
+            <div class="footer-inner">
+                <div class="footer-left">© Corlate Technologies 2026. All rights reserved.</div>
+                <div class="footer-right">
+                    <a href="privacy.html" class="footer-link">Privacy</a>
+                    <a href="terms.html" class="footer-link">Terms</a>
+                </div>
+            </div>
+        </footer>
     </div>
 
-    <header class="topbar topbar-fixed">
-        <div class="topbar-inner">
-            <div class="logo logo-compact">
-                <img src="Logo-1.png" alt="Corlate logo" class="logo-img"
-                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
-                <div class="logo-circle" style="display:none"></div>
-                <div class="company-name">CORLATE</div>
-            </div>
-            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"
-                onclick="toggleNav()">☰</button>
-            <nav class="nav">
-                <a class="nav-link" href="index.html" onclick="closeNavIfOpen()">Home</a>
-                <a class="nav-link" href="services.html" onclick="closeNavIfOpen()">Services</a>
-                <a class="nav-link" href="contact.html" onclick="closeNavIfOpen()">Contact</a>
+    <!-- Audit Modal -->
+    <div id="auditModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="auditTitle">
+        <div class="modal-panel">
+            <h3 id="auditTitle">Request Free Website Audit</h3>
+            <button class="modal-close" aria-label="Close modal" onclick="closeAuditModal()">×</button>
+            <p class="modal-note">Get a comprehensive analysis of your website's performance and SEO.</p>
 
-            </nav>
+            <form id='webform6864243000001019001_audit' action='https://crm.zoho.com/crm/WebToLeadForm'
+                name='WebToLeads6864243000001019001' method='POST'
+                onSubmit='javascript:document.charset="UTF-8"; return checkMandatory6864243000001019001_audit()'
+                accept-charset='UTF-8'>
+                <input type='text' style='display:none;' name='xnQsjsdp'
+                    value='3c2c0c2bea22f688807dabe98857834d0b343b69a77f7fa7dbaf527b96d7dbe9'></input>
+                <input type='hidden' name='zc_gad' id='zc_gad' value=''></input>
+                <input type='text' style='display:none;' name='xmIwtLD'
+                    value='a91155735492a4d03c9d4623466196c22a37765180db90b7c2b35511eb303b01a960309492f52149ff844411c70c4b0f'></input>
+                <input type='text' style='display:none;' name='actionType' value='TGVhZHM='></input>
+                <input type='text' style='display:none;' name='returnURL'
+                    value='https&#x3a;&#x2f;&#x2f;www.corlate.co.za'></input>
+
+                <input type="text" name="Last Name" placeholder="Your Name" required maxlength="80">
+                <input type="text" ftype="email" name="Email" placeholder="Your Email" required maxlength="100">
+                <input type="url" name="Description" placeholder="Website URL (e.g. example.com)" required>
+
+                <input type='text' style='display:none;' name='aG9uZXlwb3Q' value='' />
+
+                <div style="margin-top:12px;">
+                    <button id="auditSubmit" class="btn primary-cta" type="submit" style="width:100%">Get Free
+                        Audit</button>
+                </div>
+                <div id="auditStatus" class="audit-status" role="status"></div>
+            </form>
         </div>
-    </header>
+    </div>
 
-    <!-- Hero Section (polished to match homepage) -->
-    <section class="hero hero-polished">
-        <div class="hero-left fade-up">
-            <h1 class="main-title">Services that drive measurable growth</h1>
-            <p class="lead">Focused digital solutions: websites, SEO, marketing, and ongoing support to increase leads
-                and conversions.</p>
-
-            <div class="hero-ctas">
-                <button class="btn primary-cta" onclick="openAuditModal()">Request Free Audit</button>
-                <a class="btn outline-cta" href="contact.html" onclick="closeNavIfOpen()">Contact Sales</a>
-            </div>
-
-            <div class="trust-row" aria-hidden="true" style="margin-top:14px;">
-                <div class="trust-item"><strong>+150</strong><span>Clients</span></div>
-                <div class="trust-item"><strong>3x</strong><span>Avg lead uplift</span></div>
-            </div>
-        </div>
-
-        <div class="hero-right fade-up delay">
-            <div class="card compact">
-                <h4>Website Development</h4>
-                <p>Responsive, conversion-focused sites built to perform.</p>
-            </div>
-
-            <div class="card compact">
-                <h4>Marketing & SEO</h4>
-                <p>Targeted campaigns and SEO to grow traffic and leads.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Grid -->
-    <section class="services-section">
-        <div class="container">
-            <!-- Website Development -->
-            <div class="service-card featured">
-                <div class="service-header">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <rect x="2" y="3" width="20" height="14" rx="2" />
-                            <path d="M8 21h8M12 17v4" />
-                        </svg>
-                    </div>
-                    <h3>Website Development</h3>
-                </div>
-                <p class="service-description">Custom, responsive websites that convert visitors into leads.</p>
-                <ul class="service-features">
-                    <li>Responsive Design</li>
-                    <li>Modern UI/UX</li>
-                    <li>SEO Optimized</li>
-                    <li>Fast Loading</li>
-                    <li>Mobile First</li>
-                </ul>
-            </div>
-
-            <!-- Marketing & SEO -->
-            <div class="service-card featured">
-                <div class="service-header">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M3 3v18h18" />
-                            <path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3" />
-                        </svg>
-                    </div>
-                    <h3>Marketing & SEO</h3>
-                </div>
-                <p class="service-description">Marketing & SEO that attracts quality leads and improves visibility.</p>
-                <ul class="service-features">
-                    <li>Search Engine Optimization</li>
-                    <li>Google Ads Management</li>
-                    <li>Social Media Marketing</li>
-                    <li>Content Strategy</li>
-                    <li>Analytics & Reporting</li>
-                </ul>
-            </div>
-
-            <!-- Support & Maintenance -->
-            <div class="service-card featured">
-                <div class="service-header">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                            <path d="M9 12l2 2 4-4" />
-                        </svg>
-                    </div>
-                    <h3>Support & Maintenance</h3>
-                </div>
-                <p class="service-description">Reliable ongoing support to keep your website running smoothly with
-                    regular updates and security monitoring.</p>
-                <ul class="service-features">
-                    <li>24/7 Monitoring</li>
-                    <li>Regular Updates</li>
-                    <li>Security Patches</li>
-                    <li>Backup Management</li>
-                    <li>Performance Optimization</li>
-                </ul>
-            </div>
-
-            <!-- Free Website Audit -->
-            <div class="service-card featured">
-                <div class="service-header">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
-                            <path d="M14 2v6h6M16 13H8M16 17H8M10 9H8" />
-                        </svg>
-                    </div>
-                    <h3>Free Website Audit</h3>
-                    <span class="free-badge">FREE</span>
-                </div>
-                <p class="service-description">Get a comprehensive analysis of your website's performance, SEO, and user
-                    experience at no cost.</p>
-                <ul class="service-features">
-                    <li>Performance Analysis</li>
-                    <li>SEO Assessment</li>
-                    <li>Mobile Compatibility</li>
-                    <li>Security Check</li>
-                    <li>Improvement Recommendations</li>
-                </ul>
-            </div>
-
-            <!-- E-commerce Solutions -->
-            <div class="service-card featured">
-                <div class="service-header">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <circle cx="9" cy="21" r="1" />
-                            <circle cx="20" cy="21" r="1" />
-                            <path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6" />
-                        </svg>
-                    </div>
-                    <h3>E-commerce Solutions</h3>
-                </div>
-                <p class="service-description">Complete online store solutions with secure payment processing and
-                    inventory management.</p>
-                <ul class="service-features">
-                    <li>Online Store Setup</li>
-                    <li>Payment Integration</li>
-                    <li>Inventory Management</li>
-                    <li>Order Processing</li>
-                    <li>Customer Management</li>
-                </ul>
-            </div>
-
-            <!-- Custom Applications -->
-            <div class="service-card featured">
-                <div class="service-header">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <polyline points="16 18 22 12 16 6" />
-                            <polyline points="8 6 2 12 8 18" />
-                        </svg>
-                    </div>
-                    <h3>Custom Applications</h3>
-                </div>
-                <p class="service-description">Bespoke web applications and software solutions designed specifically for
-                    your business requirements.</p>
-                <ul class="service-features">
-                    <li>Custom Development</li>
-                    <li>Database Design</li>
-                    <li>API Integration</li>
-                    <li>User Management</li>
-                    <li>Scalable Architecture</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="site-footer">
-        <div class="footer-inner">
-            <div class="footer-left">© Corlate Technologies 2026. All rights reserved.
-                <div class="footer-note">We are building this site — some content may be provisional.</div>
-            </div>
-            <div class="footer-right">
-                <a href="privacy.html" class="footer-link">Privacy</a>
-                <a href="terms.html" class="footer-link">Terms</a>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Small nav script -->
-    <!-- Zoho Floating Button -->
-    <button class="zoho-float" onclick="openChat()" aria-label="Open Chat">
-        <svg viewBox="0 0 24 24" class="zoho-icon">
-            <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z" />
-        </svg>
-    </button>
     <script>
         // Minimal helpers
         window.showToast = function (msg, duration) { var t = document.getElementById('toast'); if (!t) return; t.textContent = msg; t.setAttribute('aria-hidden', 'false'); t.classList.add('show'); clearTimeout(window._toastTimeout); window._toastTimeout = setTimeout(function () { t.classList.remove('show'); t.setAttribute('aria-hidden', 'true'); }, duration || 3200); };
-        document.addEventListener('DOMContentLoaded', function () { var b = document.getElementById('siteBanner'); if (b) { if (localStorage.getItem('bannerDismissed')) { b.style.display = 'none'; document.body.classList.add('banner-hidden'); } else { document.body.classList.remove('banner-hidden'); } } });
-        window.dismissBanner = function () { var b = document.getElementById('siteBanner'); if (!b) return; b.style.display = 'none'; document.body.classList.add('banner-hidden'); localStorage.setItem('bannerDismissed', '1'); };
+        document.addEventListener('DOMContentLoaded', function () { });
 
         window.toggleNav = function () { var nav = document.querySelector('.nav'); var toggle = document.querySelector('.nav-toggle'); if (!nav || !toggle) return; var isOpen = nav.classList.toggle('open'); toggle.setAttribute('aria-expanded', isOpen); if (isOpen) { document.addEventListener('click', window._navOutsideHandler = function onDocClick(e) { if (!nav.contains(e.target) && e.target !== toggle) { nav.classList.remove('open'); toggle.setAttribute('aria-expanded', 'false'); document.removeEventListener('click', window._navOutsideHandler); } }); } };
         window.closeNavIfOpen = function () { var nav = document.querySelector('.nav'); if (nav && nav.classList.contains('open')) { nav.classList.remove('open'); var toggle = document.querySelector('.nav-toggle'); if (toggle) toggle.setAttribute('aria-expanded', 'false'); } };
@@ -304,20 +336,23 @@
             var lastActiveEl = null;
             var modal = document.getElementById('auditModal');
             var modalPanel = modal ? modal.querySelector('.modal-panel') : null;
-            var auditOpenBtn = document.querySelector('[onclick="openAuditModal()"]');
 
             window.openAuditModal = function () {
                 if (!modal) return;
                 lastActiveEl = document.activeElement;
                 modal.setAttribute('aria-hidden', 'false');
                 modal.style.display = 'flex';
+                var auditOpenBtn = document.querySelector('[onclick="openAuditModal()"]');
                 if (auditOpenBtn) auditOpenBtn.setAttribute('aria-expanded', 'true');
                 var first = modal.querySelector('input[name]');
                 if (first) first.focus();
 
-                document.addEventListener('click', window._auditOutside = function onDocClick(e) {
-                    if (modalPanel && !modalPanel.contains(e.target) && !e.target.closest('[onclick*="openAuditModal"]')) { closeAuditModal(); }
-                });
+                setTimeout(function () {
+                    document.addEventListener('click', window._auditOutside = function onDocClick(e) {
+                        if (modalPanel && !modalPanel.contains(e.target) && !e.target.closest('[onclick*="openAuditModal"]')) { closeAuditModal(); }
+                    });
+                }, 50);
+
                 document.addEventListener('keydown', window._auditKey = function onKey(e) {
                     if (e.key === 'Escape' || e.key === 'Esc') { closeAuditModal(); }
                 });
@@ -327,6 +362,7 @@
                 if (!modal) return;
                 modal.setAttribute('aria-hidden', 'true');
                 modal.style.display = 'none';
+                var auditOpenBtn = document.querySelector('[onclick="openAuditModal()"]');
                 if (auditOpenBtn) auditOpenBtn.setAttribute('aria-expanded', 'false');
                 if (lastActiveEl) lastActiveEl.focus();
                 if (window._auditOutside) document.removeEventListener('click', window._auditOutside);
@@ -334,21 +370,45 @@
             };
         })();
 
-        window.handleAuditSubmit = function (e) {
-            e.preventDefault();
-            var form = document.getElementById('auditForm');
-            var submitBtn = document.getElementById('auditSubmit');
-            var status = document.getElementById('auditStatus');
-            if (submitBtn) { submitBtn.disabled = true; }
-            setTimeout(function () {
-                var msg = 'Thanks! Request received. We will contact you shortly.';
-                if (status) { status.textContent = msg; status.style.display = 'block'; }
-                if (window.showToast) showToast(msg, 3200);
-                form.reset();
-                if (submitBtn) { submitBtn.disabled = false; }
-                setTimeout(function () { closeAuditModal(); if (status) status.style.display = 'none'; }, 2500);
-            }, 800);
-            return false;
+        // Zoho CRM Audit Form Validation
+        function validateEmail6864243000001019001_audit() {
+            var form = document.forms['WebToLeads6864243000001019001'];
+            var emailFld = form.querySelectorAll('[ftype=email]');
+            for (var i = 0; i < emailFld.length; i++) {
+                var emailVal = emailFld[i].value;
+                if ((emailVal.replace(/^\s+|\s+$/g, '')).length != 0) {
+                    var atpos = emailVal.indexOf('@');
+                    var dotpos = emailVal.lastIndexOf('.');
+                    if (atpos < 1 || dotpos < atpos + 2 || dotpos + 2 >= emailVal.length) {
+                        alert('Please enter a valid email address.');
+                        emailFld[i].focus();
+                        return false;
+                    }
+                }
+            }
+            return true;
+        }
+
+        window.checkMandatory6864243000001019001_audit = function () {
+            var mndFileds = new Array('Last Name', 'Description');
+            var fldLangVal = new Array('Name', 'Website URL');
+            var form = document.querySelector('#auditModal form');
+            for (var i = 0; i < mndFileds.length; i++) {
+                var fieldObj = form[mndFileds[i]];
+                if (fieldObj) {
+                    if (((fieldObj.value).replace(/^\s+|\s+$/g, '')).length == 0) {
+                        alert(fldLangVal[i] + ' cannot be empty.');
+                        fieldObj.focus();
+                        return false;
+                    }
+                }
+            }
+            if (!validateEmail6864243000001019001_audit()) {
+                return false;
+            }
+            document.getElementById('auditSubmit').setAttribute('disabled', true);
+            if (window.showToast) showToast('Submitting audit request...', 2000);
+            return true;
         };
     </script>
     <script>window.$zoho = window.$zoho || {}; $zoho.salesiq = $zoho.salesiq || { ready: function () { } }</script>

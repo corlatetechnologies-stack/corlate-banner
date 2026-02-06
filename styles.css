@@ -20,8 +20,8 @@ body {
     /* allow page scrolling */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    padding-top: calc(var(--topbar-height) + var(--banner-height));
-    /* header + banner height */
+    padding-top: var(--topbar-height);
+    /* header height only */
     background: #141519;
     color: #ffffff;
 }
@@ -30,9 +30,7 @@ body {
 .banner,
 .content,
 .services-container,
-.contact-page,
-.contact-container,
-.contact-minimal {
+.contact-page {
     flex: 1;
 }
 
@@ -60,6 +58,13 @@ body {
     font-size: 14px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.03);
     z-index: 1101;
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), opacity 0.4s ease;
+}
+
+.site-banner.scrolled {
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
 }
 
 .site-banner .banner-close {
@@ -130,7 +135,6 @@ body.banner-hidden {
 .banner {
     position: relative;
     width: 100%;
-    min-height: 100vh;
     /* allow content to grow while keeping full-screen feel */
     background: #141519;
     /* Solid background as requested */
@@ -1222,23 +1226,6 @@ h6 {
 }
 
 
-/* Website */
-.website {
-    position: fixed;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 16px;
-    color: rgba(255, 255, 255, 0.8);
-    letter-spacing: 1px;
-    text-align: center;
-    z-index: 999;
-    background: rgba(0, 0, 0, 0.3);
-    padding: 8px 20px;
-    border-radius: 20px;
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-}
 
 /* Footer */
 .site-footer {
@@ -1372,57 +1359,93 @@ h6 {
     gap: 6px;
 }
 
-/* Audit Section (minimal) */
-.audit-section.audit-minimal {
+.services-overview {
+    padding: 80px 20px;
     background: transparent;
-    padding: 36px 20px;
-    margin-top: 24px;
 }
 
-.audit-section.audit-minimal .audit-inner {
-    max-width: 900px;
-    margin: 0 auto;
-    display: block;
-}
-
-.audit-section.audit-minimal .audit-left {
-    max-width: 720px;
-    margin: 0 auto;
+.section-header {
     text-align: center;
+    margin-bottom: 50px;
 }
 
-.audit-section.audit-minimal .audit-left h2 {
-    margin: 0 0 8px 0;
-    font-size: 24px;
+.section-header h2 {
+    font-size: 32px;
+    margin-bottom: 12px;
     color: #fff;
 }
 
-.audit-section.audit-minimal .audit-lead {
-    color: rgba(255, 255, 255, 0.86);
+.section-header p {
+    color: rgba(255, 255, 255, 0.7);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.services-grid-mini {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.service-card-mini {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 40px 30px;
+    border-radius: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.service-card-mini:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.service-card-mini .icon {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.service-card-mini h4 {
     margin-bottom: 12px;
+    color: #fff;
+    font-size: 20px;
+}
+
+.service-card-mini p {
     font-size: 15px;
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 1.6;
 }
 
-.audit-section.audit-minimal .audit-ctas {
-    display: flex;
-    justify-content: center;
-    gap: 12px;
-    margin-top: 6px;
+/* Scroll Fade-up Utility */
+.fade-up {
+    opacity: 0;
+    animation: fadeUp 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 }
 
-@media (max-width:920px) {
-    .audit-section.audit-minimal {
-        padding: 28px 16px;
+.delay {
+    animation-delay: 0.2s;
+}
+
+.delay-large {
+    animation-delay: 0.4s;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
     }
 
-    .audit-section.audit-minimal .audit-left {
-        text-align: center;
-    }
-
-    .audit-section.audit-minimal .audit-ctas {
-        justify-content: center;
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
+
 
 /* Contact Section */
 .contact-section {
@@ -1891,6 +1914,93 @@ h6 {
     fill: currentColor;
 }
 
+/* Mobile Nav & Layout Refinements */
+@media (max-width: 920px) {
+    .nav {
+        background: rgba(20, 21, 25, 0.98);
+        backdrop-filter: blur(15px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        padding: 24px 20px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        text-align: center;
+        padding: 40px 0;
+    }
+
+    .hero-left,
+    .hero-right {
+        order: initial;
+        text-align: center;
+    }
+
+    .main-title::after {
+        margin: 10px auto;
+    }
+
+    .trust-row {
+        justify-content: center;
+    }
+
+    .hero-ctas {
+        justify-content: center;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .hero-ctas .btn {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .services-grid-mini {
+        grid-template-columns: 1fr;
+        padding: 0 10px;
+    }
+
+    .contact-cards {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-title {
+        font-size: 32px;
+    }
+
+    .lead {
+        font-size: 16px;
+    }
+
+    .section-header h2 {
+        font-size: 26px;
+    }
+
+    .service-card-mini,
+    .service-card {
+        padding: 30px 20px;
+        text-align: center;
+    }
+
+    .service-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .service-icon {
+        margin: 0 auto 15px;
+    }
+
+    .site-footer .footer-inner {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+}
+
 /* Responsive Design */
 @media (max-width: 1024px) {
     .services-unified {
@@ -1929,41 +2039,5 @@ h6 {
 
     .service-content {
         text-align: center;
-    }
-}
-
-.service-content {
-    text-align: center;
-}
-
-.main-title {
-    font-size: 48px;
-    letter-spacing: 4px;
-}
-
-.description {
-    font-size: 16px;
-}
-
-.buttons {
-    flex-direction: row;
-    justify-content: center;
-    gap: 15px;
-}
-
-.btn {
-    padding: 16px 30px;
-    font-size: 14px;
-}
-
-
-@media (max-width: 480px) {
-    .main-title {
-        font-size: 36px;
-        letter-spacing: 2px;
-    }
-
-    .description {
-        font-size: 14px;
     }
 }
