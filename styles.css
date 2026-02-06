@@ -712,6 +712,20 @@ body.banner-hidden {
     margin: 0 auto;
 }
 
+.maintenance-notice {
+    display: inline-block;
+    padding: 6px 14px;
+    background: rgba(255, 194, 58, 0.1);
+    border: 1px solid rgba(255, 194, 58, 0.2);
+    color: #ffc23a;
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
 h1,
 h2,
 h3,
